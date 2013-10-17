@@ -3,7 +3,8 @@
 # mass mule verify request
 # based on mass mule password changer v0.2 (c) supahacka@gmail.com
 
-# usage: perl massMuleVerifyRequest.pl mules.txt
+# usage: perl requestVerify.pl mules.txt
+#
 # mules.txt format:
 # user@domain.com password
 
