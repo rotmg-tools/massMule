@@ -8,7 +8,7 @@
 # libnet-imap-simple-perl libnet-imap-simple-ssl-perl liburi-find-perl
 #
 # usage:
-# perl massMuleVerify.pl
+# perl verify.pl
 #
 # to do:
 # add threading
