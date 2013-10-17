@@ -1,6 +1,8 @@
 #!/usr/local/bin/perl
 # from http://www.mpgh.net/forum/655-realm-mad-god-help-requests/738102-anyone-know-http-post-url-2.html#post8811904
 #
+# configured for gmail server
+#
 #
 #requirements:
 # libnet-imap-simple-perl libnet-imap-simple-ssl-perl liburi-find-perl
