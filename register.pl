@@ -6,7 +6,7 @@
 #
 # usage:
 # email pattern, password, mule count
-# perl massMuleRegister.pl foo%%%%%@example.com password 10
+# perl register.pl foo%%%%%@example.com password 10
 # % = random number
 # $ = random letter
 #
