@@ -4,7 +4,7 @@
 # v0.2
 #
 
-# example: perl massMulepasswordChanger.pl mules.txt output.txt
+# example: perl password.pl mules.txt output.txt
 
 
 use strict;
