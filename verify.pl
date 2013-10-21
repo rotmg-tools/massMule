@@ -21,11 +21,18 @@ use Net::IMAP::Simple::SSL;
 use URI::Find;
 
   
+require "config.pl";
 
-my $server = new Net::IMAP::Simple::SSL('imap.gmail.com:993', use_ssl => "true") || die "Unable to connect to IMAP: $Net::IMAP::Simple::SSL::errstr\n";
+
+my $server = new Net::IMAP::Simple::SSL('imap.gmail.com:993', use_ssl => "true") || die "Unable to connect to IMAP.\n";
 
 
-if(!$server->login('example@gmail.com','password')){
+
+
+my $email = get_email();
+my $password  = get_password();
+
+if(!$server->login($email,$password)){
         print STDERR "Login failed: " . $server->errstr . "\n";
         exit(64);
     }
