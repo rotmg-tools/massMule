@@ -45,3 +45,8 @@ Convert from plain text to muledump.
 
 # Configuration #
 Rename config_sample.pl to config.pl and enter your settings.
+
+# Credits #
+Includes code from:
+ * http://www.mpgh.net/forum/655-realm-mad-god-help-requests/738102-anyone-know-http-post-url-2.html#post8811904
+ * http://www.mpgh.net/forum/720-realm-mad-god-tutorials-source-code/659194-multithreaded-mass-mule-password-changer-written-perl.html
