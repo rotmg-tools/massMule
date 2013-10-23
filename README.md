@@ -1,7 +1,11 @@
 massMule
 ========
 
-Scripts to manage mules.
+Perl scripts to manage mules.
+
+Some scripts may require additional Perl modules.
+
+Tested on Ubuntu Linux
 
 
 # Perl scripts #
@@ -37,3 +41,7 @@ txt2md.sh
 -----------
 Convert from plain text to muledump.
 
+
+
+# Configuration #
+Rename config_sample.pl to config.pl and enter your settings.
