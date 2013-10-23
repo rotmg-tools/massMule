@@ -1,9 +1,9 @@
 massMule
 ========
 
-Perl scripts to manage mules.
+Scripts to manage mules.
 
-Some scripts may require additional Perl modules.
+Some scripts require additional Perl modules.
 
 Tested on Ubuntu Linux
 
