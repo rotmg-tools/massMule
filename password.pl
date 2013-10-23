@@ -6,6 +6,8 @@
 
 # example: perl password.pl mules.txt output.txt
 
+# warning: don't re-run the script after the passwords have been changed ... or you risk to end up with all of your mules locked because of too many invalid password attempts (the script will of course use the old password from the mules.txt file again) 
+
 
 use strict;
 use warnings;
