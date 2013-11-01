@@ -3,8 +3,7 @@
 # mass mule verify request
 # based on mass mule password changer v0.2 (c) supahacka@gmail.com
 
-# usage: perl requestVerify.pl mules.txt
-#
+# usage: perl massMuleVerifyRequest.pl mules.txt
 # mules.txt format:
 # user@domain.com password
 
@@ -29,7 +28,7 @@ sleep 2;
 sub start_thread {
  while(my $mule=$q->dequeue_nb()){
   # Format:
-  # POST https://realmofthemadgod.appspot.com/account/changePassword
+  # POST http://realmofthemadgod.appspot.com/account/sendVerifyEmail
   # URLEncoded form
   # guid:         foo@foo.org
   # ignore:       79341
@@ -39,23 +38,20 @@ sub start_thread {
   my $content = [
  	'guid' => $mule->[0],
  	'password' => $mule->[1],
+ 	'ignore' => int(rand(1000)+1000),
   ];
  
   use LWP::UserAgent;
   use HTTP::Request::Common qw(POST);
   my $ua = LWP::UserAgent->new;
   
-  my $retry=1;
-  my $timesTried=0;
   my $result=undef;
-  while($retry==1){
-   my $req = POST 'realmofthemadgod.appspot.com/char/verify', $content;
+
+   my $req = POST 'http://realmofthemadgod.appspot.com/account/sendVerifyEmail', $content;
    my $res = $ua->request($req);
    $result=$res->decoded_content;
-   $timesTried++;
-   $retry=0 if ($result eq '<Success/>' || $timesTried>=2);
-   print 'request verify for mule ' . $mule->[0] . '/' . $mule->[1] . ' to ' . $mule->[2] . ' - result: ' . $result . ($timesTried>1 ? ' (retry #' . $timesTried .' )' : '') . "\n";
-  }
+   print 'request verify for mule ' . $mule->[0] . '/' . $mule->[1] . ' - result: ' . $result . "\n";
+  
  }
 }
 
