@@ -3,7 +3,7 @@
 # mass mule verify request
 # based on mass mule password changer v0.2 (c) supahacka@gmail.com
 
-# usage: perl massMuleVerifyRequest.pl mules.txt
+# usage: perl requestVerify.pl mules.txt
 # mules.txt format:
 # user@domain.com password
 
@@ -32,7 +32,6 @@ sub start_thread {
   # URLEncoded form
   # guid:         foo@foo.org
   # ignore:       79341
-  # newPassword:  futloch2
   # password:     futloch
  
   my $content = [
